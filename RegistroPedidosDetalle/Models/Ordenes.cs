@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RegistroPedidosDetalle.Models
 {
-    public class Ordenes
+    public partial class Ordenes
     {
         [Key]
         public int OrdenId { get; set; }
@@ -20,20 +20,11 @@ namespace RegistroPedidosDetalle.Models
         [ForeignKey("SuplidorId")]
         public virtual Suplidores Suplidor { get; set; }
 
+
         [Required(ErrorMessage="Es necesario introducir el Monto")]
         public decimal Monto { get; set; }
 
         [ForeignKey("OrdenId")]
-        public virtual List<OrdenesDetalles> OrdenesDetalle { get; set; }
-
-        public class OrdenesDetalles
-        {
-            [Key]
-            public int Id { get; set; }
-            public int OrdenId { get; set; }
-            public int Cantidad { get; set; }
-            public decimal Costo { get; set; }
-
-        }
+        public virtual List<OrdenesDetalle> OrdenesDetalle { get; set; } = new List<OrdenesDetalle>();
     }
 }

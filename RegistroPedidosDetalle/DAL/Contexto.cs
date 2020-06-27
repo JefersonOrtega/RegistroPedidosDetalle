@@ -11,7 +11,7 @@ namespace RegistroPedidosDetalle.DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source = C:\BasesDeDatosAp2\RegistroPrestamos.db");
+            optionsBuilder.UseSqlite(@"Data Source = DATA\RegistroPedidos.db");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -39,10 +39,27 @@ namespace RegistroPedidosDetalle.DAL
             modelBuilder.Entity<Productos>().HasData(new Productos
             {
                 ProductoId = 2,
+                Descripcion = "Chuleta",
+                Costo = 1000,
+                Inventario = 5
+            });
+
+            modelBuilder.Entity<Productos>().HasData(new Productos
+            {
+                ProductoId = 3,
                 Descripcion = "Carton de Leche",
                 Costo = 60,
                 Inventario = 15
             });
+
+            modelBuilder.Entity<Productos>().HasData(new Productos
+            {
+                ProductoId = 4,
+                Descripcion = "Mantequilla",
+                Costo = 125,
+                Inventario = 10
+            });
+
 
 
         }

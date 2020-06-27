@@ -158,7 +158,7 @@ namespace RegistroPedidosDetalle.BLL
             return lista;
         }
 
-        public static List<Ordenes> GetPrestamos()
+        public static List<Ordenes> GetOrdenes()
         {
             List<Ordenes> lista = new List<Ordenes>();
             Contexto contexto = new Contexto();
@@ -177,5 +177,44 @@ namespace RegistroPedidosDetalle.BLL
             }
             return lista;
         }
+
+        public static Productos BuscarProductos(int id)
+        {
+            Contexto contexto = new Contexto();
+            Productos producto;
+            try
+            {
+                producto = contexto.Productos.Find(id);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return producto;
+        }
+
+        public static List<Productos> GetListProductos(Expression<Func<Productos, bool>> criterio)
+        {
+            List<Productos> lista = new List<Productos>();
+            Contexto contexto = new Contexto();
+            try
+            {
+                lista = contexto.Productos.Where(criterio).ToList();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return lista;
+        }
+
     }
 }
