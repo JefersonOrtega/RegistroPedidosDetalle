@@ -69,11 +69,11 @@ namespace RegistroPedidosDetalle.BLL
           
             try
             {
-                contexto.Database.ExecuteSqlRaw($"Delete FROM MorasDetalle Where PrestamoId = {orden.OrdenId}");
+                contexto.Database.ExecuteSqlRaw($"Delete FROM MorasDetalle Where OrdenId = {orden.OrdenId}");
 
                 foreach (var item in orden.OrdenesDetalle)
                 {
-
+                    contexto.Database.ExecuteSqlRaw($"INSERT INTO OrdenesDetalle (OrdenId, ProductoId, Cantidad, Costo) values({item.OrdenId},{orden.OrdenId},{item.Cantidad},{item.Costo})");
                     contexto.Entry(item).State = EntityState.Added;
                 }
 
