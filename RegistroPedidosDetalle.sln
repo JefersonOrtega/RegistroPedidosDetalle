@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistroPedidosDetalle", "RegistroPedidosDetalle\RegistroPedidosDetalle.csproj", "{22BC3220-51D6-458D-838D-0A647CFF555E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22BC3220-51D6-458D-838D-0A647CFF555E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22BC3220-51D6-458D-838D-0A647CFF555E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22BC3220-51D6-458D-838D-0A647CFF555E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22BC3220-51D6-458D-838D-0A647CFF555E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC2662DE-B6DF-4B40-A5D4-CB7515A21ACF}
+	EndGlobalSection
+EndGlobal
